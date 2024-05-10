@@ -276,7 +276,9 @@ Jump back to the main terraform director and run terraform apply.
 Since the node was deleted in the Console and not in the terraform 
 directory terraform will want to recreate it.  Say "yes" to apply.
 
-Now run the aws-install-nginx.yml  playbook once more and you have recreated ans-client-1.
+Now run the aws-install-nginx.yml  playbook once more and you have recreated ans-client-1. 
 
-1. Unsure if it's worth it?  See [Why Infrastructure as Code](./Why-Infrastructure-as-Code.md)
+By deleting ans-client-1 demonstrated how to rebuild a system that had been previously in use.  
+
+1. Unsure if Infrastructure as Code is worth it?  See [Why Infrastructure as Code](./Why-Infrastructure-as-Code.md)
    

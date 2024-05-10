@@ -37,7 +37,7 @@ This will be a living project and I will be adding additional and more complex m
 
 #   Ansible CLI Installation
 
-1. [Install Ansible](./docs/Install-Ansible.mdInstall-Ansible.md)
+1. [Install Ansible](./docs/Install-Ansible.md)
 2. [Create ansible configuration and inventory](./docs/Create-ansible-configuration-and-inventory.md)
 
 
