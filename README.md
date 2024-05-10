@@ -30,7 +30,7 @@ This will be a living project and I will be adding additional and more complex m
 
 2.  [Provision AWS Network](./docs/Provision-AWS-Network.md)
 
-3.  [Create Security Group](.docs/Create-Security-Group.md)
+3.  [Create Security Group](./docs/Create-Security-Group.md)
 
 4.  [Provision EC2 Nodes](./docs/Provision-EC2-Nodes.md)
 
@@ -54,4 +54,4 @@ This will be a living project and I will be adding additional and more complex m
 
 2. [Terraform vs Ansible](./docs/Terraform-vs-Ansible.md)
 
-4. [Planned Updates for the playground](./docs/Panned-Updates.md)
+4. [Planned Updates for the playground](./docs/Planned-Updates.md)
