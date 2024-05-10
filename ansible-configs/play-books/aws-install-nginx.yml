@@ -1,0 +1,35 @@
+---
+- name: Installing nginx on nodes based on inventory group
+  hosts: webservers
+  gather_facts: false
+  become: yes
+  tasks:
+  - name: Upgrade all packages
+    ansible.builtin.yum:
+      name: "*"
+      state: latest
+
+  - name: Use yum to install nginx
+    ansible.builtin.yum:
+      name: nginx
+      state: present
+      update_cache: true
+
+  - name: Enable nginx on reboot
+    ansible.builtin.service:
+      name: "nginx"
+      enabled: true
+
+  - name: Start nginx
+    ansible.builtin.service:
+      name: "nginx"
+      state: started
+
+  - name: Update the default nginx index
+    ansible.builtin.copy:
+      src: ../files/index.html
+      dest: /usr/share/nginx/html
+      owner: root
+      group: root
+      mode: u=rw,g=r,o=r
+

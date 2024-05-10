@@ -1,0 +1,24 @@
+---
+- name: List ec2 nodes that are running
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: get ec2 instance info
+      ec2_instance_info:
+        filters:
+          instance-state-name: ["running"]
+        region: us-east-1
+      register: ec2_info
+
+    - name: Print details of ec2_info
+      ansible.builtin.debug:
+        msg:  "Instance: {{ item.tags.Name }} is {{ item.state.name }}. "
+      loop: "{{ ec2_info['instances'] }}"
+      loop_control:
+        label: "{{ item.tags.Name }}"
+
+   # - name: Print details of ec2_info
+   #   ansible.builtin.debug:
+   #     msg: "{{ ec2_info }}"
+

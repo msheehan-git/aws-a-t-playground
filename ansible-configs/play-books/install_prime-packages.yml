@@ -1,0 +1,13 @@
+---
+- name: Install packages on ansible prime node
+  hosts: all
+  gather_facts: false
+  become: yes
+  tasks: 
+    - name: Installing packages on Debian Family 
+      ansible.builtin.apt:
+        name: 
+          - git
+          - ansible
+        state: present
+        when: ec2_tags.tags.Name = ans-prime

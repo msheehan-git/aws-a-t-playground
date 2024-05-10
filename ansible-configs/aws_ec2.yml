@@ -1,0 +1,14 @@
+plugin: amazon.aws.aws_ec2
+aws_access_key: "{{ lookup('env', 'AWS_ACCESS_KEY') }}"
+aws_secret_key: "{{ lookup('env', 'AWS_SECRET_ACCESS_KEY') }}"
+regions: us-east-1
+
+compose:
+  ansible_host: public_ip_address
+
+
+hostnames:
+- tag:Name
+
+groups:
+  webservers: "'true' in tags.webserver"

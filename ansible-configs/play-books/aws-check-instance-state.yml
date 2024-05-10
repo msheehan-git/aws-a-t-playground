@@ -1,0 +1,17 @@
+---
+- name: Get state of node from ec2_instance_info
+  hosts: localhost
+  gather_facts: false
+  connection: local
+
+  tasks:
+    - name: get ec2 instance info
+      ec2_instance_info:
+        region: us-east-1
+      register: ec2_info
+
+    - debug:
+        msg:  "Instance: {{ item.tags.Name }} is {{ item.state.name }}. "
+      loop: "{{ ec2_info['instances'] }}"
+      loop_control:
+        label: "{{ item.tags.Name }}"

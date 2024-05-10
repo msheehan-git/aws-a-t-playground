@@ -1,0 +1,11 @@
+---
+- name: Update all packages using yum
+  hosts: ans-prime
+  gather_facts: false
+  become: yes
+  tasks:
+  - name: Upgrade all packages
+    ansible.builtin.yum:
+      name: "*"
+      state: latest
+

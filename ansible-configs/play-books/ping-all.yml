@@ -1,0 +1,20 @@
+---
+
+# This is a simple playbook. The same can be accomplished using ansible cmd
+# ansible all -m ansible.builtin.ping
+
+
+- name: Demo of ping
+  hosts: all
+  gather_facts: false
+  tasks:
+   - name: Ping all hosts
+     ansible.builtin.ping:
+
+   - name: Print custom message
+     ansible.builtin.debug:
+      msg: It works!
+
+
+
+

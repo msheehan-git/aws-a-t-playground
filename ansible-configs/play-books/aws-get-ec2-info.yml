@@ -1,0 +1,12 @@
+---
+- name: Get state of node from ec2_instance_info
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: get ec2 instance info
+      ec2_instance_info:
+        region: us-east-1
+      register: ec2_info
+    
+   - name: print ec2 info

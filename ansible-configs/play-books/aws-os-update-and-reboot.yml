@@ -1,0 +1,32 @@
+---
+- name: Update all packages using yum and reboot
+  hosts: aws_ec2
+  gather_facts: false
+  become: yes
+  serial: 1
+  tasks:
+  - name: Upgrade all packages
+    ansible.builtin.yum:
+      name: "*"
+      state: latest
+
+  - name: Run uptine command 
+    ansible.builtin.command: /usr/bin/uptime
+    register: uptime_out
+
+  - name: Print uptime
+    ansible.builtin.debug:
+      msg:  " {{ uptime_out.stdout }} "
+
+  - name: Reboot systems after update
+    ansible.builtin.reboot:
+
+  - name: Run uptine command again
+    ansible.builtin.command: /usr/bin/uptime
+    register: uptime_out_post
+
+  - name: Print uptime
+    ansible.builtin.debug:
+      msg:  " {{ uptime_out_post.stdout }} " 
+
+

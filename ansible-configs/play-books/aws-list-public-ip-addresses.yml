@@ -1,0 +1,21 @@
+---
+- name: List the public IP for ec2 nodes that are running
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: get ec2 instance info
+      ec2_instance_info:
+        filters:
+          instance-state-name: ["running"]
+        region: us-east-1
+      register: ec2_info
+
+    - name: Print the public IP address
+      ansible.builtin.debug:
+       msg:  "Instance: {{ item.tags.Name }}  public IP address is {{ item.public_ip_address }}"
+      loop: "{{ ec2_info['instances'] }}"
+      loop_control:
+        label: "{{ item.tags.Name }}"
+
+
