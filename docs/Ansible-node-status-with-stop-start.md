@@ -2,7 +2,7 @@
 
 # Ansible EC2 Node Status with Stop and Start
 
-In this section we'll be using the  aws.ec2_instance and aws.ec2_info modules to see the state of the nodes  andd later add playbooks to manage that state..  Let's start by getting some info about the node.
+In this section we'll be using the  aws.ec2_instance and aws.ec2_info modules to see the state of the nodes and later add playbooks to manage that state..  Let's start by getting some info about the node.
 
 # Check the status of the nodes. 
 
@@ -47,7 +47,7 @@ We only have two nodes, yet there's quite a bit of put. Let's capture that any o
 
 3.  Edit the aws-list-all-running-nodes.yml and update the debug task.
 
-./play-books/aws-list-all-running-nodes.ym
+./play-books/aws-list-all-running-nodes.yml
 ```diff
     - name: Print details of ec2_info
       ansible.builtin.debug:

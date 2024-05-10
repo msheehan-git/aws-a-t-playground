@@ -34,7 +34,7 @@ If you've made it this far, congratulations! You've been doing a lot of copying 
 We can view the historical versions to see what the infrastructure looked like at a previous point in time.     
 
 
-# Is it too late?
+# Is it too late to switch to IaC management?
 Having an existing infrastructure does not prevent you from using IaC. Draw that line in the sand and use IaC for all resources going forward. 
 
 Terraform has an import function which allows existing components to be added to the state file and managed by terraform. 
