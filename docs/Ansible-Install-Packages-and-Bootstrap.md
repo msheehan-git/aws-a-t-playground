@@ -280,5 +280,7 @@ Now run the aws-install-nginx.yml  playbook once more and you have recreated ans
 
 By deleting ans-client-1 demonstrated how to rebuild a system that had been previously in use.  
 
-1. Unsure if Infrastructure as Code is worth it?  See [Why Infrastructure as Code](./Why-Infrastructure-as-Code.md)
+# Importing to terraform
+
+Next up: importing external resources into terraform [Terraform import](./Terraform-import-with-Ansible-create.md)
    

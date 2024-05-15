@@ -1,0 +1,23 @@
+---
+- name: Create an EC2 Node using Ansible
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: get ec2 instance info
+      ec2_instance_info:
+        filters:
+          tag:Name: ["ans-client-1"]
+      register: ec2_info
+
+
+    - name: Provision node
+      ec2_instance:
+        name: "ans-client-3"
+        key_name: "{{ ec2_info.instances[0].key_name }}"
+        vpc_subnet_id: "{{ ec2_info.instances[0].subnet_id }}"
+        instance_type: "{{ ec2_info.instances[0].instance_type }}"
+        security_group: "limited_access"
+        image_id: "{{ ec2_info.instances[0].image_id }}"
+        tags:
+          webserver: "true"
+
