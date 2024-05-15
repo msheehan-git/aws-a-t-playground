@@ -26,13 +26,13 @@ This will be a living project and I will be adding additional and more complex m
 
 #   Configure AWS using Terraform
 
-1.  [Configure S3 and Provision VPC](./docs/Configure-S3-and-Provision-VPC-Terraform.md) 
+1. [Configure S3 and Provision VPC](./docs/Configure-S3-and-Provision-VPC-Terraform.md) 
 
-2.  [Provision AWS Network](./docs/Provision-AWS-Network.md)
+2. [Provision AWS Network](./docs/Provision-AWS-Network.md)
 
-3.  [Create Security Group](./docs/Create-Security-Group.md)
+3. [Create Security Group](./docs/Create-Security-Group.md)
 
-4.  [Provision EC2 Nodes](./docs/Provision-EC2-Nodes.md)
+4. [Provision EC2 Nodes](./docs/Provision-EC2-Nodes.md)
 
 
 #   Ansible CLI Installation
@@ -43,13 +43,19 @@ This will be a living project and I will be adding additional and more complex m
 
 # Ansible CLI and Playbooks
 
-1.  [Create ping playbook](./docs/Create-ping-playbook.md)
-2.  [Ansible EC2 Node Status with Stop and Start](./docs/Ansible-node-status-with-stop-start.md)
-3.  [Ansible OS Updates and Inventory Groups](./docs/Ansible-OS-Updates-and-Inventory-Groups.md)
-4.   [Ansible Install Packages and Bootstrap](./docs/Ansible-Install-Packages-and-Bootstrap.md)
+1. [Create ping playbook](./docs/Create-ping-playbook.md)
+2. [Ansible EC2 Node Status with Stop and Start](./docs/Ansible-node-status-with-stop-start.md)
+3. [Ansible OS Updates and Inventory Groups](./docs/Ansible-OS-Updates-and-Inventory-Groups.md)
+4. [Ansible Install Packages and Bootstrap](./docs/Ansible-Install-Packages-and-Bootstrap.md)
+
+
+# Additional Configuration Options
+
+1. [Terraform import with Ansible create](./docs/Terraform-import-with-Ansible-create.md)
 
 
 # Summary 
+
 1. [Why Infrastructure as Code](./docs/Why-Infrastructure-as-Code.md)
 
 2. [Terraform vs Ansible](./docs/Terraform-vs-Ansible.md)

@@ -37,7 +37,7 @@ We can view the historical versions to see what the infrastructure looked like a
 # Is it too late to switch to IaC management?
 Having an existing infrastructure does not prevent you from using IaC. Draw that line in the sand and use IaC for all resources going forward. 
 
-Terraform has an import function which allows existing components to be added to the state file and managed by terraform. 
+As we saw in the [Terraform Import](./Terraform-import-with-Ansible-create.md) section, external resources can be added to the state file and managed by terraform. 
 
 
     

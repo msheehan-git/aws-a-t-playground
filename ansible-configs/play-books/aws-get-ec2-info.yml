@@ -1,6 +1,6 @@
 ---
 - name: Get state of node from ec2_instance_info
-  hosts: all
+  hosts: localhost
   gather_facts: false
 
   tasks:
@@ -9,4 +9,8 @@
         region: us-east-1
       register: ec2_info
     
-   - name: print ec2 info
+
+    - name: Print details of ec2_info
+      ansible.builtin.debug:
+        msg: "{{ ec2_info }}"
+
